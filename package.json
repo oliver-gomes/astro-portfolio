@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "Portfolio by Oliver G",
+  "description": "This is a simple portfolio with Astor JS. Feel free to experiment and add your own touch to it. Cheers 🍻",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
