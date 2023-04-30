@@ -1,0 +1,53 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { projects: "bantr" },
+      props: {
+        name: "Bantr",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "introz" },
+      props: {
+        name: "Introz",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "twit" },
+      props: {
+        name: "Twit",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+    {
+      params: { projects: "fourth" },
+      props: {
+        name: "fourth",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+      },
+    },
+  ];
+}
+
+const { projects } = Astro.params;
+const { name, desc } = Astro.props;
+---
+
+<MainLayout>
+  <section class="mx-auto w-3/6">
+    <img
+      src=`/images/${projects}.png`
+      width="600"
+      height="600"
+      class="rounded"
+    />
+    <h1 class="font-bold mt-4">Project {name}</h1>
+    <p>{desc}</p>
+    <section></section>
+  </section>
+</MainLayout>

@@ -1,15 +1,34 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+const name = "John";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout
+  title="John Doe Portfolio Site"
+  seoTitle="John Does, Software Engineer Portfolio"
+  seoDesc="Software Engineer who expertise in Astro, React, NextJS and Node"
+>
+  <div class="w-8/12 md:w-6/12 mx-auto">
+    <h1
+      class="text-5xl md:text-6xl text-center drop-shadow-[0px_35px_35px_rgba(39,245,131,0.6)]"
+    >
+      Hey 👋, I am John Doe
+    </h1>
+    <div id="typed-strings">
+      <p>I am a <strong>Software Engineer</strong></p>
+      <p>I <em>work</em> with Astro, React, NextJS, node.</p>
+    </div>
+
+    <div class="text-center mt-6"><span id="typed"></span></div>
+  </div>
+</MainLayout>
+
+<script>
+  import Typed from "typed.js";
+
+  var typed = new Typed("#typed", {
+    stringsElement: "#typed-strings",
+    typeSpeed: 50,
+    loop: true,
+  });
+</script>
